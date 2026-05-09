@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-
+app.set("trust proxy", 1);
 const schoolRoutes = require("./Routes/schoolRoutes")
 app.use(express.json());
 app.get("/",(req,res)=>{
