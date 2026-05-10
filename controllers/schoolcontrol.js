@@ -48,7 +48,7 @@ const schooladd = async (req, res) => {
 }
 
 const schoollist = async (req, res) => {
-    const {latitude, longitude} = req.query
+    const {latitude, longitude} = req.body
 
     if (latitude > 90 || latitude < -90){
         res.status(400).json({error:"latitude must be between -90 and 90"})
